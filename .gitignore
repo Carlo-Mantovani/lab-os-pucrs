@@ -1,0 +1,16 @@
+labsisop-grp-03/output
+labsisop-grp-03/dl
+labsisop-grp-03/.auto.deps
+labsisop-grp-03/.config.cmd
+labsisop-grp-03/.config.old
+labsisop-grp-03/.config.tmp
+labsisop-grp-03/.config
+labsisop-grp-03/*.depend
+labsisop-grp-03/*.o
+labsisop-grp-03/*.patch
+labsisop-grp-03/*.diff
+labsisop-grp-03/*.orig
+labsisop-grp-03/*.rej
+labsisop-grp-03/*~
+labsisop-grp-03/*.pyc
+labsisop-grp-03/sdb.bin
