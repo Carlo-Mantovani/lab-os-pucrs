@@ -27,3 +27,6 @@ COMPILER=$BUILDROOT_DIR/output/host/bin/i686-buildroot-linux-gnu-gcc
 $COMPILER -o $BUILDROOT_DIR/output/target/bin/syscall_test $BUILDROOT_DIR/custom-scripts/syscall_test.c
 
 make -C $BASE_DIR/../modules/simple_driver/
+
+make -C $BASE_DIR/../modules/sstf-iosched/
+
