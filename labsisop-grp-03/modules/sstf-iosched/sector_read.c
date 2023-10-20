@@ -8,16 +8,18 @@
 #include <fcntl.h>
 #include <string.h>
 #include <unistd.h>
+#include<time.h>
 
 #define BUFFER_LENGTH 512
 #define DISK_SZ 1073741824
-#define FORKS 8
+#define FORKS 10
 
 int main()
 {
 	int ret, fd, pid, i;
 	unsigned int pos;
 	char buf[BUFFER_LENGTH];
+	double start;
 
 	printf("Starting sector read example...\n");
 
@@ -29,7 +31,10 @@ int main()
 	system("echo 4 > /sys/block/sdb/queue/max_sectors_kb"); 
 	system("echo 0 > /sys/block/sdb/queue/read_ahead_kb");
 
+
 	printf("Forking processes to put stress on disk scheduler...\n");
+	// Time stamp start
+	start = clock();
 	for (int i = 0; i < FORKS; i++)
 		fork();
 
@@ -49,6 +54,10 @@ int main()
 		read(fd, buf, 100);
 	}
 	close(fd);
+	//prints fork id
+	//printf("Fork id: %d\n", getpid());
+	// Time stamp end
+	//printf("Time elapsed: %f\n", (clock() - start) / CLOCKS_PER_SEC);
 
 	return 0;
 }

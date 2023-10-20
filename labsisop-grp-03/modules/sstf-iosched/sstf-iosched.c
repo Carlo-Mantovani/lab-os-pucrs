@@ -40,11 +40,11 @@ static int sstf_dispatch(struct request_queue *q, int force)
 	auxR = list_first_entry_or_null(&nd->queue, struct request, queuelist);
 
 	// percorre a fila para encontrar a requisição mais proxima do setor mais recente
-//	list_for_each_entry (rq, &nd->queue, queuelist) {
-//		if (abs(blk_rq_pos(rq) - recent_sector) < abs(blk_rq_pos(auxR) - recent_sector)) {
-//			auxR = rq;
-	//	}
-	//}
+	list_for_each_entry (rq, &nd->queue, queuelist) {
+		if (abs(blk_rq_pos(rq) - recent_sector) < abs(blk_rq_pos(auxR) - recent_sector)) {
+			auxR = rq;
+		}
+	}
 
 	// se a requisição mais proxima for encontrada, remove da fila e despacha
 	rq = auxR;
@@ -67,13 +67,13 @@ static void sstf_add_request(struct request_queue *q, struct request *rq)
 
 
 	/* Iterate through the queue and insert the request in ascending order of sector position. */
-	list_for_each_entry(entry, &nd->queue, queuelist) {
-		if (abs(blk_rq_pos(rq) - recent_sector) < abs(blk_rq_pos(entry) - recent_sector)) {
-			list_add_tail(&rq->queuelist, &entry->queuelist);
-			printk(KERN_EMERG "[SSTF] add %c %llu\n", direction, blk_rq_pos(rq));
-			return;
-		}
-	}
+	// list_for_each_entry(entry, &nd->queue, queuelist) {
+	// 	if (abs(blk_rq_pos(rq) - recent_sector) < abs(blk_rq_pos(entry) - recent_sector)) {
+	// 		list_add_tail(&rq->queuelist, &entry->queuelist);
+	// 		printk(KERN_EMERG "[SSTF] add %c %llu\n", direction, blk_rq_pos(rq));
+	// 		return;
+	// 	}
+	// }
 
 	list_add_tail(&rq->queuelist, &nd->queue);
 	printk(KERN_EMERG "[SSTF] add %c %llu\n", direction, blk_rq_pos(rq));

@@ -1,1 +1,1 @@
-cmd_/home/carlo/Desktop/lab_os_pucrs/labsisop-grp-03/modules/simple_driver/built-in.o :=  rm -f /home/carlo/Desktop/lab_os_pucrs/labsisop-grp-03/modules/simple_driver/built-in.o; ar rcSTPD /home/carlo/Desktop/lab_os_pucrs/labsisop-grp-03/modules/simple_driver/built-in.o
+cmd_/home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/simple_driver/built-in.o :=  rm -f /home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/simple_driver/built-in.o; ar rcSTPD /home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/simple_driver/built-in.o
