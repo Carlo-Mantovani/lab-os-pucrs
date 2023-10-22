@@ -1,7 +1,7 @@
 from matplotlib import pyplot as plt
 
-x_fifo = []
-y_fifo = []
+x_noop = []
+y_noop = []
 x_sstf = []
 y_sstf = []
 
@@ -9,7 +9,7 @@ order_noop = 1
 order_sstf = 1
 last_sector_noop = None
 last_sector_sstf = None
-fifo_sectors = 0
+noop_sectors = 0
 sstf_sectors = 0
 end_noop = False
 end_sstf = False
@@ -29,13 +29,13 @@ with open("result.txt") as file_in:
                 end_sstf = True
         # Get the sector number
         sector = int(line.split()[3])
-        # Treats data for FIFO
+        # Treats data for NOOP
         if "add" in line and not end_noop:
-            x_fifo.append(sector)
-            y_fifo.append(order_noop)
+            x_noop.append(sector)
+            y_noop.append(order_noop)
             # Calculates the total sectors traversed by NOOP
             if last_sector_noop is not None:
-                fifo_sectors += abs(sector - last_sector_noop)
+                noop_sectors += abs(sector - last_sector_noop)
             last_sector_noop = sector
             order_noop += 1
         # Treats data for SSTF
@@ -53,7 +53,7 @@ with open("result.txt") as file_in:
 # Plot the data
 plt.clf()
 plt.figure(figsize=(5, 15))
-plt.plot(x_fifo, y_fifo, label="NOOP", color="mediumslateblue")
+plt.plot(x_noop, y_noop, label="NOOP", color="mediumslateblue")
 plt.plot(x_sstf, y_sstf, label="SSTF", color="red")
 plt.legend()
 plt.xlabel("Sector")
@@ -62,7 +62,7 @@ plt.title("SSTF vs NOOP")
 plt.savefig("plot.png")
 
 
-# Print the total sectors traversed for FIFO
-print("Total sectors traversed by NOOP:", fifo_sectors)
+# Print the total sectors traversed for NOOP
+print("Total sectors traversed by NOOP:", noop_sectors)
 # Print the total sectors traversed for SSTF
 print("Total sectors traversed by SSTF:", sstf_sectors)
