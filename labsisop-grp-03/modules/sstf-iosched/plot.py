@@ -1,8 +1,8 @@
 from matplotlib import pyplot as plt
 
 x_noop = []
-y_noop = []
 x_sstf = []
+y_noop = []
 y_sstf = []
 
 order_noop = 1
