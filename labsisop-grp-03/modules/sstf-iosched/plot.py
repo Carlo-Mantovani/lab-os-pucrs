@@ -15,7 +15,7 @@ end_fifo = False
 end_sstf = False
 
 # Read the result.txt file and store the data in the x and y arrays for each algorithm
-with open("result.txt") as file_in:
+with open("result2.txt") as file_in:
     lines = []
     # Read the file line by line
     for line in file_in:
@@ -59,7 +59,7 @@ plt.legend()
 plt.xlabel("Sector")
 plt.ylabel("Order")
 plt.title("SSTF vs FIFO")
-plt.savefig("plot.png")
+plt.savefig("plot2.png")
 
 
 # Print the total sectors traversed for FIFO
