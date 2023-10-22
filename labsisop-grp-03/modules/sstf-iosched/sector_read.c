@@ -12,7 +12,7 @@
 
 #define BUFFER_LENGTH 512
 #define DISK_SZ 1073741824
-#define FORKS 10
+#define FORKS 12
 
 int main()
 {
@@ -34,7 +34,7 @@ int main()
 
 	printf("Forking processes to put stress on disk scheduler...\n");
 	// Time stamp start
-	start = clock();
+
 	for (int i = 0; i < FORKS; i++)
 		fork();
 
@@ -54,10 +54,7 @@ int main()
 		read(fd, buf, 100);
 	}
 	close(fd);
-	//prints fork id
-	//printf("Fork id: %d\n", getpid());
-	// Time stamp end
-	//printf("Time elapsed: %f\n", (clock() - start) / CLOCKS_PER_SEC);
+
 
 	return 0;
 }
