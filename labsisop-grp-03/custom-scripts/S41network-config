@@ -8,8 +8,8 @@ case "$1" in
 	printf "Configuring host communication."
 	
 	/sbin/ifconfig eth0 192.168.1.10 up
-	/sbin/route add -host 192.168.0.92 dev eth0
-	/sbin/route add default gw 192.168.0.92
+	/sbin/route add -host 10.200.132.11 dev eth0
+	/sbin/route add default gw 10.200.132.11
 	[ $? = 0 ] && echo "OK" || echo "FAIL"
 	;;
   stop)

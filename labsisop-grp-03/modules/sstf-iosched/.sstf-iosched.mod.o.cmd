@@ -1,8 +1,8 @@
-cmd_/home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o := gcc -Wp,-MD,/home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/.sstf-iosched.mod.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/11/include -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -m32 -msoft-float -mregparm=3 -freg-struct-return -fno-pic -mpreferred-stack-boundary=2 -march=i686 -Wa,-mtune=generic32 -ffreestanding -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -DCONFIG_AS_SSSE3=1 -DCONFIG_AS_CRC32=1 -DCONFIG_AS_AVX=1 -DCONFIG_AS_AVX2=1 -DCONFIG_AS_AVX512=1 -DCONFIG_AS_SHA1_NI=1 -DCONFIG_AS_SHA256_NI=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-int-in-bool-context -O2 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init  -DKBUILD_BASENAME='"sstf_iosched.mod"'  -DKBUILD_MODNAME='"sstf_iosched"' -DMODULE  -c -o /home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o /home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.c
+cmd_/home/Carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o := gcc -Wp,-MD,/home/Carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/.sstf-iosched.mod.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -m32 -msoft-float -mregparm=3 -freg-struct-return -fno-pic -mpreferred-stack-boundary=2 -march=i686 -Wa,-mtune=generic32 -ffreestanding -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -DCONFIG_AS_SSSE3=1 -DCONFIG_AS_CRC32=1 -DCONFIG_AS_AVX=1 -DCONFIG_AS_AVX2=1 -DCONFIG_AS_AVX512=1 -DCONFIG_AS_SHA1_NI=1 -DCONFIG_AS_SHA256_NI=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-int-in-bool-context -O2 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init  -DKBUILD_BASENAME='"sstf_iosched.mod"'  -DKBUILD_MODNAME='"sstf_iosched"' -DMODULE  -c -o /home/Carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o /home/Carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.c
 
-source_/home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o := /home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.c
+source_/home/Carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o := /home/Carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.c
 
-deps_/home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o := \
+deps_/home/Carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o := \
     $(wildcard include/config/module/unload.h) \
   include/linux/module.h \
     $(wildcard include/config/modules.h) \
@@ -66,7 +66,7 @@ deps_/home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-
     $(wildcard include/config/mmu.h) \
     $(wildcard include/config/prove/locking.h) \
     $(wildcard include/config/panic/timeout.h) \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h \
   include/linux/linkage.h \
   include/linux/stringify.h \
   include/linux/export.h \
@@ -604,6 +604,6 @@ deps_/home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-
   include/linux/vermagic.h \
   include/generated/utsrelease.h \
 
-/home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o: $(deps_/home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o)
+/home/Carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o: $(deps_/home/Carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o)
 
-$(deps_/home/carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o):
+$(deps_/home/Carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/sstf-iosched.mod.o):

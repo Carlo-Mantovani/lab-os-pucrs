@@ -30,3 +30,5 @@ make -C $BASE_DIR/../modules/simple_driver/
 
 make -C $BASE_DIR/../modules/sstf-iosched/
 
+make -C $BASE_DIR/../custom-scripts/t3/
+
