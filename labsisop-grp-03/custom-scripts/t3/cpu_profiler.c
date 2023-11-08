@@ -45,14 +45,14 @@ void *run(void *data)
 		//printf("%d-",id);
 		if(gbuffer_index >= bufferSize){
 			pthread_mutex_unlock(&lock);
-			return 0;
+			return NULL;
 		}
 		gbuffer[gbuffer_index] = tag;
 		gbuffer_index++;
 		pthread_mutex_unlock(&lock);
 	}
 
-	return 0;
+	return NULL;
 }
 
 
@@ -74,7 +74,7 @@ int main(int argc, char **argv)
 	// buffer init
 	bufferSize = atoi(argv[2]) * 1000;
 	gbuffer = (char *) malloc(bufferSize);
-	memset(gbuffer,0,bufferSize);
+	memset(gbuffer,0,bufferSize); 
 
 	// threads array init
 	int nThreads = atoi(argv[1]);
@@ -90,7 +90,6 @@ int main(int argc, char **argv)
 	}
 
     printf("\nAll threads set, go!\n");
-	//pthread_barrier_wait(&barrier);
 
 	for(int i = 0; i < nThreads; i++){
 			pthread_join(threads[i], NULL);
@@ -125,9 +124,6 @@ int main(int argc, char **argv)
 		printf("%c = %d\n", i+0x41 ,counter[i]);
 	}
 
-	// free(gbuffer);
-	// free(threads);
-	// free(counter);
 
     pthread_barrier_destroy(&barrier);
 	pthread_mutex_destroy(&lock);
