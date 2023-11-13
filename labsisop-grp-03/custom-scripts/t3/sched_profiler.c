@@ -9,7 +9,6 @@
 
 // Buffer
 char *buffer;
-int bufferIndex = 0;
 int bufferSize;
 
 // Thread array
@@ -32,6 +31,7 @@ void print_buffer()
 // Thread task
 void *thread_run(void *id)
 {
+	int bufferIndex = 0;
 	char tag = (char)id + 0x41; // convert int to char (A, B, C, ...)
 
 	// barrier to sync threads
