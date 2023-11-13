@@ -65,8 +65,7 @@ static void sstf_add_request(struct request_queue *q, struct request *rq)
 	char direction = 'R';
 	struct request *entry;
 
-
-	/* Iterate through the queue and insert the request in ascending order of sector position. */
+	// iterar sobre a fila e inserir request em ordem crescente de posicao de setor 
 	// list_for_each_entry(entry, &nd->queue, queuelist) {
 	// 	if (abs(blk_rq_pos(rq) - recent_sector) < abs(blk_rq_pos(entry) - recent_sector)) {
 	// 		list_add_tail(&rq->queuelist, &entry->queuelist);

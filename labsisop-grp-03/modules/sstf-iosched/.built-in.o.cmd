@@ -1,1 +1,0 @@
-cmd_/home/Carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/built-in.o :=  rm -f /home/Carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/built-in.o; ar rcSTPD /home/Carlo/Desktop/lab-os-pucrs/labsisop-grp-03/modules/sstf-iosched/built-in.o
