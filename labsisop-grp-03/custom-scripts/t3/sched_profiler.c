@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 {
 	// check parameters
 	if (argc <= 2) {
-		printf("Parameters: <Thread Number> <Buffer Size(mb)> \n\n");
+		printf("Parameters: <Thread Number> <Buffer Size(kb)> \n\n");
 		return 0;
 	}
 
@@ -63,7 +63,7 @@ int main(int argc, char **argv)
 	pthread_barrier_init(&thread_barrier, NULL, atoi(argv[1]));
 
 	// buffer init
-	bufferSize = atoi(argv[2]) * 1000000; // convert mb to bytes
+	bufferSize = atoi(argv[2]) * 1000; // convert mb to bytes
 	buffer = (char *)malloc(bufferSize); // allocate buffer memory
 
 	// threads array init
