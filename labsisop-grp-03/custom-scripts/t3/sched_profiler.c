@@ -89,7 +89,7 @@ int main(int argc, char **argv)
 	printf("Scheduling order: ");
 	for (int i = 0; i < bufferSize; i++) {
 		if ((i > 0 && buffer[i] != buffer[i - 1]) || i == 0) { // if the char is different from the previous one
-			printf("%c", buffer[i]); // print the char
+			//printf("%c", buffer[i]); // print the char
 			counter[(int)buffer[i] - 0x41] += 1; // increment the counter
 		}
 	}
